@@ -8,7 +8,10 @@
 </head>
 <body>
     <script>
-        hideFieldByCheckbox('textInput', 'accept') </script>
+        document.addEventListener('DOMContentLoaded', function() {
+        hideFieldByCheckbox('textInput', 'accept')
+        console.log('DOM fully loaded and parsed');
+        }); </script>
     <form>
         <!-- Checkbox -->
         <label for="accept">Accept Terms:</label>
