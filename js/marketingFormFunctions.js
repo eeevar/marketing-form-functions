@@ -16,7 +16,7 @@
         }
 
         //Show/Hide field inputToHide if field deciderInput has value = valueToShowDiv 
-        function hideFieldDiv(inputToHide, deciderInput, valueToShowDiv) {
+        function hideFieldDiv1(inputToHide, deciderInput, valueToShowDiv) {
             const divToHide = inputToHide.parentElement;
             divToHide.style.display = 'none';
 

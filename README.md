@@ -1,7 +1,9 @@
 # marketing-form-functions
 
+# index.html
+Use the index.html to test changes to your functions.
 
-
+# OOB eventlisteners
 These eventlisteners are OOB from Microsoft with CIJ. Use them to trigger your functions as necessary.
 document.addEventListener("d365mkt-beforeformload", function () {
     console.log("d365mkt-beforeformload");

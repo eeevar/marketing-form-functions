@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <script src="https://eeevar.github.io/marketing-form-functions/js/marketingFormFunctions.js"></script>
+</head>
+<body>
+    <script>
+        let decider = document.getElementsByName("accept")[0];
+        let inputToHide = document.getElementsByName("textInput")[0];
+        hideFieldDiv(inputToHide, decider) </script>
+    <form>
+        <!-- Checkbox -->
+        <label for="accept">Accept Terms:</label>
+        <input type="checkbox" id="accept" name="accept"><br><br>
+
+        <!-- Text Input Field -->
+        <div>
+        <label for="textInput">Text Input:</label>
+        <input type="text" id="textInput" name="textInput"><br><br>
+        </div>
+        
+        <!-- Numbers Input Field -->
+        <label for="numberInput">Number Input:</label>
+        <input type="number" id="numberInput" name="numberInput"><br><br>
+
+        <!-- Dropdown -->
+        <label for="dropdown">Select Option:</label>
+        <select id="dropdown" name="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+        </select><br><br>
+
+        <!-- Multi Select Field -->
+        <label for="multiSelect">Choose Options:</label>
+        <select id="multiSelect" name="multiSelect" multiple>
+            <option value="optionA">Option A</option>
+            <option value="optionB">Option B</option>
+            <option value="optionC">Option C</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
