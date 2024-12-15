@@ -1,11 +1,14 @@
         //#region Functions
         //Show/Hide fields if checkbox is/isn't ticked.
-        function hideFieldDiv(inputToHide, checkboxId) {
+        function hideFieldByCheckbox(inputToHideId, checkboxId) {
+            let inputToHide = document.getElementsByName(inputToHideId)[0];
+            let decider = document.getElementsByName(checkboxId)[0];
+
             const divToHide = inputToHide.parentElement;
             divToHide.style.display = 'none';
             
-            if(deciderInput) {
-                checkboxId.addEventListener('change', function() {
+            if(decider) {
+                decider.addEventListener('change', function() {
                     if (this.checked) {
                         divToHide.style.display = '';
                     } else {
@@ -16,7 +19,7 @@
         }
 
         //Show/Hide field inputToHide if field deciderInput has value = valueToShowDiv 
-        function hideFieldDiv1(inputToHide, deciderInput, valueToShowDiv) {
+        function hideFieldByValue(inputToHide, deciderInput, valueToShowDiv) {
             const divToHide = inputToHide.parentElement;
             divToHide.style.display = 'none';
 
