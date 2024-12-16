@@ -63,7 +63,7 @@
             });
         }
 
-        function initializeFormValidation(errorMessages) {
+        function initializeFormValidation() {
             const form = document.querySelector('.marketingForm');
             const allFormFields = form.querySelectorAll('form input, form select, form textarea, form checkbox');
             const formAllFieldArray = [];
@@ -87,19 +87,19 @@
 
                 const formField = new FormField(field, errorSpan);
 
+                /*
                 if (errorMessages[field.name]) {
                     formField.validationMessage = errorMessages[field.name];
                 } else {
                     formField.validationMessage = 'Enter a valid value';
                 }
-                    /*
+                */
                     if (field.name === "firstname") formField.validationMessage = 'Please tell us how we can call you.';
                     else if (field.name === "lastname") formField.validationMessage = 'We would really like to know your last name.';
                     else if (field.name === "emailaddress1") formField.validationMessage = 'Do you really want us to send to this address?';
                     else if (field.name === "mobilephone") formField.validationMessage = 'Seems like there is a typo in the phone number. It should start with "+", with at least 4 digits';
                     else if (field.type === "checkbox") formField.validationMessage = 'Please allow us to send you emails.';
                     else formField.validationMessage = 'Enter a valid value';
-                    */
                         
 
                 formAllFieldArray.push(formField);
