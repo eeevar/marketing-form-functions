@@ -169,4 +169,5 @@
             }
         }
 
+console.log('marketingformjs loaded');
         //#endregion
