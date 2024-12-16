@@ -1,6 +1,6 @@
         //#region Functions
         //Show/Hide fields if checkbox is/isn't ticked.
-        function hideFieldByCheckbox(inputToHideId, checkboxId) {
+        function toggleFieldByCheckbox(inputToHideId, checkboxId) {
             let inputToHide = document.getElementsByName(inputToHideId)[0];
             let decider = document.getElementsByName(checkboxId)[0];
 
@@ -19,12 +19,15 @@
         }
 
         //Show/Hide field inputToHide if field deciderInput has value = valueToShowDiv 
-        function hideFieldByValue(inputToHide, deciderInput, valueToShowDiv) {
+        function toggleFieldByValue(inputToHideId, deciderInputId, valueToShowDiv) {
+            let inputToHide = document.getElementsByName(inputToHideId)[0];
+            let decider = document.getElementsByName(deciderInputId)[0];
+
             const divToHide = inputToHide.parentElement;
             divToHide.style.display = 'none';
 
-            if (deciderInput) {
-                deciderInput.addEventListener('change', function () {
+            if (decider) {
+                decider.addEventListener('change', function () {
                     if (deciderInput.value !== valueToShowDiv) {
                         divToHide.style.display = 'none';
                     } else {
@@ -84,12 +87,20 @@
 
                 const formField = new FormField(field, errorSpan);
 
+                /*
+                if (errorMessages[field.name]) {
+                    formField.validationMessage = errorMessages[field.name];
+                } else {
+                    formField.validationMessage = 'Enter a valid value';
+                }
+                */
                 if (field.name === "firstname") formField.validationMessage = 'Please tell us how we can call you.';
                 else if (field.name === "lastname") formField.validationMessage = 'We would really like to know your last name.';
                 else if (field.name === "emailaddress1") formField.validationMessage = 'Do you really want us to send to this address?';
                 else if (field.name === "mobilephone") formField.validationMessage = 'Seems like there is a typo in the phone number. It should start with "+", with at least 4 digits';
                 else if (field.type === "checkbox") formField.validationMessage = 'Please allow us to send you emails.';
                 else formField.validationMessage = 'Enter a valid value';
+                
 
                 formAllFieldArray.push(formField);
             });
@@ -168,6 +179,12 @@
                 }
             }
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Dispatch custom event
+            const event = new Event('CustomFunctionsLoaded');
+            document.dispatchEvent(event);
+        });
 
 console.log('marketingformjs loaded');
         //#endregion
