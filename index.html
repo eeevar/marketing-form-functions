@@ -9,8 +9,14 @@
 <body>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-        hideFieldByCheckbox('textInput', 'accept')
-        console.log('DOM fully loaded and parsed');
+        const errorMessages = [
+            { name: "accept", value: "Please allow us to send you emails." },
+            { name: "textInput", value: "Enter a valid value" },
+            { name: "numberInput", value: "Enter a valid value" },
+            { name: "dropdown", value: "Enter a valid value" },
+            { name: "multiSelect", value: "Enter a valid value" }
+        ];
+            initializeFormValidation(errorMessages);            
         }); </script>
     <form>
         <!-- Checkbox -->
