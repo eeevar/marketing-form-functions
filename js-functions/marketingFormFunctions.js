@@ -90,7 +90,10 @@
 
                 if (errorMessages[field.name]) {
                     formField.validationMessage = errorMessages[field.name];
+                    console.log("1");
+
                 } else {
+                    console.log("2");
                     formField.validationMessage = 'Enter a valid value';
                     }
                 /*
