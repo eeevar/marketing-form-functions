@@ -84,12 +84,14 @@
                         formField.validate();
                     });
                 }
-
+                var errorMessagesFieldName = errorMessages.find(function(key) {
+                    console.log("key: " + key.name);
+                    console.log("field name: " + field.name);                    
+                    return key.name === fieldName;
+                }); 
+                
+                console.log(errorMessagesFieldName);
                 const formField = new FormField(field, errorSpan);
-
-                var errorMessagesFieldName = errorMessages.find(key => key.name === field.name); 
-                console.log("errorMessages field name: " + errorMessagesFieldName.name);
-                console.log("field name: " + field.name);
 
                 if (field.name === errorMessages[field.name]) {
                     formField.validationMessage = errorMessages[field.value];
