@@ -87,9 +87,8 @@
 
                 const formField = new FormField(field, errorSpan);
 
-                console.log("formfield name: " + formField.name);
                 var errorMessagesFieldName = errorMessages.find(key => key.name === field.name); 
-                console.log("errorMessages field name: " + errorMessagesFieldName);
+                console.log("errorMessages field name: " + errorMessagesFieldName.name);
                 console.log("field name: " + field.name);
 
                 if (field.name === errorMessages[field.name]) {
