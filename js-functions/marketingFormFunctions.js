@@ -84,17 +84,17 @@
                         formField.validate();
                     });
                 }
-                var errorMessagesFieldName = errorMessages.find(function(key) {
+                var errorMessageField = errorMessages.find(function(key) {
                     console.log("key: " + key.name);
                     console.log("field name: " + field.name);                    
                     return key.name === field.name;
-                }); 
+                });  
                 
-                console.log(errorMessagesFieldName);
+                console.log(errorMessageField);
                 const formField = new FormField(field, errorSpan);
 
-                if (field.name === errorMessages[field.name]) {
-                    formField.validationMessage = errorMessages[field.value];
+                if (field.name === errorMessageField.name) {
+                    formField.validationMessage = errorMessageField.value;
                     console.log("1");
 
                 } else {
