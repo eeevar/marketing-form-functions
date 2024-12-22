@@ -28,7 +28,7 @@
 
             if (decider) {
                 decider.addEventListener('change', function () {
-                    if (deciderInput.value !== valueToShowDiv) {
+                    if (decider.value !== valueToShowDiv) {
                         divToHide.style.display = 'none';
                     } else {
                         divToHide.style.display = '';
@@ -92,13 +92,9 @@
                 
                 const formField = new FormField(field, errorSpan);
 
-                
-
                 if (errorMessageField && (field.name == errorMessageField.name)) {
                     formField.validationMessage = errorMessageField.value;
-                    console.log("1");
                 } else {
-                    console.log("2");
                     formField.validationMessage = 'Enter a valid value';
                     }
                 /*
