@@ -16,6 +16,11 @@
             { name: "dropdown", value: "4" },
             { name: "multiSelect", value: "5" }
         ];
+
+        errorMessages.forEach(element => {
+            console.log("name: " + element.name);
+            console.log("value: " + element.value);
+        });
             initializeFormValidation(errorMessages);            
         }); </script>
     <form>
