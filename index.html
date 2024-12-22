@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Form</title>
-    <script src="https://eeevar.github.io/marketing-form-functions/js/marketingFormFunctions.js"></script>
+    <script src="https://eeevar.github.io/marketing-form-functions/js-functions/marketingFormFunctions.js"></script>
 </head>
 <body>
     <script>
@@ -17,12 +17,10 @@
             { name: "multiSelect", value: "5" }
         ];
 
-        errorMessages.forEach(element => {
-            console.log("name: " + element.name);
-            console.log("value: " + element.value);
-        });
-            initializeFormValidation(errorMessages);            
+        var msg = errorMessages.find(msg => msg.name === "accept");
+        console.log(msg);
         }); </script>
+
     <form>
         <!-- Checkbox -->
         <label for="accept">Accept Terms:</label>
