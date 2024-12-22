@@ -90,13 +90,13 @@
                     return key.name === field.name;
                 });  
                 
-                console.log(errorMessageField);
                 const formField = new FormField(field, errorSpan);
-
-                if (field.name === errorMessageField.name) {
+                
+                console.log("3" + errorMessageField.name);
+                console.log("4" + field.name);
+                if (field.name == errorMessageField.name) {
                     formField.validationMessage = errorMessageField.value;
                     console.log("1");
-
                 } else {
                     console.log("2");
                     formField.validationMessage = 'Enter a valid value';
