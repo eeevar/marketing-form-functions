@@ -69,7 +69,8 @@
             const formAllFieldArray = [];
 
             allFormFields.forEach((field) => {
-                console.log(errorMessages[field.name]);
+                console.log("error message: " + errorMessages[field.name]);
+                console.log("field name" + field.name);
                 const span = document.createElement('span');
                 span.style.color = "red";
                 var errorSpan;
