@@ -36,7 +36,7 @@
                 });
             }
         }
-
+        
         
         function addSubmitButtonHoverEffect(effect, restingColor, hoverColor, restingDecoration, hoverDecoration) {
             let submitButton = document.getElementsByName("submitButton")[0];
@@ -88,7 +88,8 @@
                 const formField = new FormField(field, errorSpan);
 
                 console.log("formfield name: " + formField.name);
-                console.log("errorMessages field name: " + errorMessages[field.name]);
+                var errorMessagesFieldName = errorMessages.find(key => key.name === field.name); 
+                console.log("errorMessages field name: " + errorMessagesFieldName);
                 console.log("field name: " + field.name);
 
                 if (field.name === errorMessages[field.name]) {
