@@ -1,7 +1,8 @@
 # marketing-form-functions
 
 # index.html
-Use the index.html to test changes to your functions.
+Use the index.html to test changes to your functions. Your changes will be live here: https://eeevar.github.io/marketing-form-functions/
+
 
 # OOB eventlisteners
 These eventlisteners are OOB from Microsoft with CIJ. Use them to trigger your functions as necessary.
