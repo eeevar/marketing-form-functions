@@ -85,20 +85,16 @@
                     });
                 }
                 var errorMessageField = errorMessages.find(function(key) {
-                    if(key.name){
                         console.log("key: " + key.name);
                         console.log("field name: " + field.name);                    
                         return key.name === field.name;
-                    } else {
-                        return false;
-                    }
                 });  
                 
                 const formField = new FormField(field, errorSpan);
+
                 
-                console.log("3" + errorMessageField.name);
-                console.log("4" + field.name);
-                if (field.name == errorMessageField.name) {
+
+                if (errorMessageField && (field.name == errorMessageField.name)) {
                     formField.validationMessage = errorMessageField.value;
                     console.log("1");
                 } else {
