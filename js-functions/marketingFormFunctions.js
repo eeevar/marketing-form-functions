@@ -69,8 +69,6 @@
             const formAllFieldArray = [];
 
             allFormFields.forEach((field) => {
-                console.log("error message: " + errorMessages[field.name]);
-                console.log("field name" + field.name);
                 const span = document.createElement('span');
                 span.style.color = "red";
                 var errorSpan;
@@ -89,8 +87,12 @@
 
                 const formField = new FormField(field, errorSpan);
 
-                if (errorMessages[field.name]) {
-                    formField.validationMessage = errorMessages[field.name];
+                console.log("formfield name: " + formField.name);
+                console.log("errorMessages field name: " + errorMessages[field.name]);
+                console.log("field name: " + field.name);
+
+                if (field.name === errorMessages[field.name]) {
+                    formField.validationMessage = errorMessages[field.value];
                     console.log("1");
 
                 } else {
