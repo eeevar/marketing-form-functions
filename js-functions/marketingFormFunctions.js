@@ -85,9 +85,13 @@
                     });
                 }
                 var errorMessageField = errorMessages.find(function(key) {
-                    console.log("key: " + key.name);
-                    console.log("field name: " + field.name);                    
-                    return key.name === field.name;
+                    if(key.name){
+                        console.log("key: " + key.name);
+                        console.log("field name: " + field.name);                    
+                        return key.name === field.name;
+                    } else {
+                        return false;
+                    }
                 });  
                 
                 const formField = new FormField(field, errorSpan);
