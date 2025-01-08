@@ -1,8 +1,8 @@
         //#region Functions
         //Show/Hide fields if checkbox is/isn't ticked.
-        function toggleFieldByCheckbox(inputToHideId, checkboxId) {
-            let inputToHide = document.getElementsByName(inputToHideId)[0];
-            let decider = document.getElementsByName(checkboxId)[0];
+        function toggleFieldByCheckbox(inputToHideName, checkboxName) {
+            let inputToHide = document.getElementsByName(inputToHideName)[0];
+            let decider = document.getElementsByName(checkboxName)[0];
 
             const divToHide = inputToHide.parentElement;
             divToHide.style.display = 'none';
@@ -19,9 +19,9 @@
         }
 
         //Show/Hide field inputToHide if field deciderInput has value = valueToShowDiv 
-        function toggleFieldByValue(inputToHideId, deciderInputId, valueToShowDiv) {
-            let inputToHide = document.getElementsByName(inputToHideId)[0];
-            let decider = document.getElementsByName(deciderInputId)[0];
+        function toggleFieldByValue(inputToHideName, deciderInputName, valueToShowDiv) {
+            let inputToHide = document.getElementsByName(inputToHideName)[0];
+            let decider = document.getElementsByName(deciderInputName)[0];
 
             const divToHide = inputToHide.parentElement;
             divToHide.style.display = 'none';
