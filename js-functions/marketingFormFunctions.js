@@ -37,32 +37,34 @@
             }
         }
         
-        
+        /*
+        * Not ready to be used
         function addSubmitButtonHoverEffect(effect, restingColor, hoverColor, restingDecoration, hoverDecoration) {
             let submitButton = document.getElementsByName("submitButton")[0];
             let alink = document.getElementsByName("alink")[0];
-
+            
             console.log(alink)
-
+            
             submitButton.style.transition = effect;
-
+            
             submitButton.addEventListener('mouseover', function () {
                 submitButton.style.backgroundColor = restingColor;
             });
-
+            
             submitButton.addEventListener('mouseout', function () {
                 submitButton.style.backgroundColor = hoverColor;
             });
-
+            
             alink.addEventListener('mouseover', function () {
                 alink.style.textDecoration = 'underline';
             });
-
+            
             alink.addEventListener('mouseout', function () {
                 alink.style.textDecoration = 'none';
             });
         }
-
+        */
+        
         function initializeFormValidation(errorMessages) {
             const form = document.querySelector('.marketingForm');
             const allFormFields = form.querySelectorAll('form input, form select, form textarea, form checkbox');
