@@ -1,4 +1,30 @@
+
+# index.html
+Use the index.html to test changes to your functions. Your changes will be live here: https://eeevar.github.io/marketing-form-functions/
+
+
+# OOB eventlisteners
+These eventlisteners are OOB from Microsoft with CIJ. Use them to trigger your functions as necessary.
+document.addEventListener("d365mkt-beforeformload", function () {
+    console.log("d365mkt-beforeformload");
+});
+
+document.addEventListener("d365mkt-afterformload",  function () {
+    console.log("d365mkt-afterformload");
+});
+
+document.addEventListener("d365mkt-formrender", function () {
+    console.log("d365mkt-formrender");
+});
+
+document.addEventListener("d365mkt-formsubmit", function () {
+    console.log("blocked mkt-formsubmit");
+});
+
+
 # How to use this repository in your D365 CI forms
+At the top of this page, select "Code" to see the code clearly.
+
 1. Copy the code below and paste it between the <body> and <main> tags in the HTML editor. In the funciton "afterFormLoad()" you can call the functions available in the repository. 
 
 <script src="https://eeevar.github.io/marketing-form-functions/js-functions/marketingFormFunctions.js" onload="dispatchCustomEvent()"></script><script>
@@ -54,24 +80,3 @@
         }
 </script>
 
-# index.html
-Use the index.html to test changes to your functions. Your changes will be live here: https://eeevar.github.io/marketing-form-functions/
-
-
-# OOB eventlisteners
-These eventlisteners are OOB from Microsoft with CIJ. Use them to trigger your functions as necessary.
-document.addEventListener("d365mkt-beforeformload", function () {
-    console.log("d365mkt-beforeformload");
-});
-
-document.addEventListener("d365mkt-afterformload",  function () {
-    console.log("d365mkt-afterformload");
-});
-
-document.addEventListener("d365mkt-formrender", function () {
-    console.log("d365mkt-formrender");
-});
-
-document.addEventListener("d365mkt-formsubmit", function () {
-    console.log("blocked mkt-formsubmit");
-});
