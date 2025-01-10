@@ -1,5 +1,4 @@
-# marketing-form-functions
-# How to use functions in yout D365 CI forms
+# How to use this repository in your D365 CI forms
 1. Copy the code below and paste it between the <body> and <main> tags in the HTML editor. In the funciton "afterFormLoad()" you can call the functions available in the repository. 
 
 <script src="https://eeevar.github.io/marketing-form-functions/js-functions/marketingFormFunctions.js" onload="dispatchCustomEvent()"></script><script>
