@@ -23,7 +23,7 @@ document.addEventListener("d365mkt-formsubmit", function () {
 
 
 # How to use this repository in your D365 CI forms
-At the top of this page, select "Code" to see the code clearly.
+At the top of this page, select "Code" instead of "Preview" to see the code clearly.
 
 1. Copy the code below and paste it between the <body> and <main> tags in the HTML editor. In the funciton "afterFormLoad()" you can call the functions available in the repository. 
 
