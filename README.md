@@ -25,7 +25,35 @@
 
 2. You can also copy the function code straight from the repository and paste it into your form. In that case it should look something like this:
 
- 
+<script>
+        document.addEventListener("d365mkt-afterformload", function () {
+            afterFormLoad();
+        });
+
+        function afterFormLoad() {
+                //toggleFieldByCheckbox("myinputname", "mycheckboxname");
+            });
+        }
+
+//Show/Hide fields if checkbox is/isn't ticked.
+        function toggleFieldByCheckbox(inputToHideName, checkboxName) {
+            let inputToHide = document.getElementsByName(inputToHideName)[0];
+            let decider = document.getElementsByName(checkboxName)[0];
+
+            const divToHide = inputToHide.parentElement;
+            divToHide.style.display = 'none';
+            
+            if(decider) {
+                decider.addEventListener('change', function() {
+                    if (this.checked) {
+                        divToHide.style.display = '';
+                    } else {
+                        divToHide.style.display = 'none';
+                    }
+                });
+            }
+        }
+</script>
 
 # index.html
 Use the index.html to test changes to your functions. Your changes will be live here: https://eeevar.github.io/marketing-form-functions/
